@@ -28,9 +28,9 @@ st.write('Itens:', opcoes)
 n_maquina = st.text_input('Numero de série da Máquina:')
 st.write('Numero de série do item:', n_maquina)
 n_clivador = st.text_input('Numero de série do Clivador:')
-st.write('Numero de série do item:', n_maquina)
+st.write('Numero de série do item:', n_clivador)
 n_power = st.text_input('Numero de série do Power Meter:')
-st.write('Numero de série do item:', n_maquina)
+st.write('Numero de série do item:', n_power)
 
 
 outros_itens = st.text_input('Outros itens:')
