@@ -16,6 +16,14 @@ posto_atendimento = st.radio('Posto de teste de atendimento:', options= ['1','2'
 
 posto_manutencao = st.radio('Posto de teste da manutenção:', options= ['1','2','3','4','5','6'])
 
+opcoes = st.multiselect(
+    'Itens da maleta:',
+    ['Máquina', 'Carregador', 'Clivador', 'Decapador','Roleteador', 'V. de Alcool','Power Meter' ],
+    )
+st.write('Itens:', opcoes)
+
+outros_itens = st.text_input('Outros itens:')
+st.write('Outros itens:', outros_itens)
 
 txt = st.text_area('Eventuais problemas:', ''' ''')
 st.write('Eventuais problemas:', txt)
@@ -26,6 +34,7 @@ st.write('Ramais:', ramais)
 
 traco = '-'* 45
 
-os = f'Quem entregou: {entregando}\n\nAss: {traco}\n\nAutorizado a pegar: {autorizado}\n\nAss: {traco}\n\nPosto de teste de atendimento: {posto_atendimento}\nPosto de teste da manutenção: {posto_manutencao}\nEventuais problemas: {txt}\nRamal(s): {ramais} '
+os = f'Quem entregou: {entregando}\n\nAss: {traco}\n\nAutorizado a pegar: {autorizado}\n\nAss: {traco}\n\nPosto de teste de atendimento: {posto_atendimento}\nPosto de teste da manutenção: {posto_manutencao}\nEventuais problemas: {txt}\nItens da maleta: {opcoes}\nOutros itens: {outros_itens}\nRamal(s): {ramais} '
+
 st.download_button('Download',os, file_name = formatado)
 
