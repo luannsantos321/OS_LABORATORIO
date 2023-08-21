@@ -44,3 +44,4 @@ os = f'Quem entregou: {entregando}\n\nAss: {traco}\n\nAutorizado a pegar: {autor
 
 st.download_button('Download',os, file_name = f'{entregando} {formatado}')
 
+
