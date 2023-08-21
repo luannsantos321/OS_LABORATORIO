@@ -1,7 +1,9 @@
 import streamlit as st
-from datetime import datetime
+from datetime import datetime, timedelta
 
-now = datetime.now().strftime('%H:%M:%S')
+agora = datetime.now() - timedelta(hours=3)
+formatado = agora.strftime('%H:%M:%S')
+
 st.title('O.S de máquinas Laboratório')
 
 entregando = st.text_input('Quem entregou:')
@@ -25,5 +27,5 @@ st.write('Ramais:', ramais)
 traco = '-'* 45
 
 os = f'Quem entregou: {entregando}\n\nAss: {traco}\n\nAutorizado a pegar: {autorizado}\n\nAss: {traco}\n\nPosto de teste de atendimento: {posto_atendimento}\nPosto de teste da manutenção: {posto_manutencao}\nEventuais problemas: {txt}\nRamal(s): {ramais} '
-st.download_button('Download',os, file_name = now)
+st.download_button('Download',os, file_name = formatado)
 
